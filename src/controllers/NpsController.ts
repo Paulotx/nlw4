@@ -27,6 +27,14 @@ class NpsController {
         const totalAnswers = surveysUsers.length;
 
         const calculate = Number((((promoters - detractors) / totalAnswers) * 100).toFixed(2));
+
+        let result = ""
+
+        if(calculate < 7) {
+            result = "Result is low. Try to improve services",
+        } else {
+            result = "The results are great. Congratulations",
+        }
         return response.json({
             detractors,
             promoters,
