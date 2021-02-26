@@ -31,9 +31,9 @@ class NpsController {
         let result = ""
 
         if(calculate < 7) {
-            result = "Result is low. Try to improve services",
+            result = "Result is low. Try to improve services";
         } else {
-            result = "The results are great. Congratulations",
+            result = "The results are great. Congratulations";
         }
         return response.json({
             detractors,
@@ -41,6 +41,7 @@ class NpsController {
             passives,
             totalAnswers,
             nps: calculate,
+            result,
         });
     }
 
